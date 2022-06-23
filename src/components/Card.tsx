@@ -1,8 +1,7 @@
-import { Link, LinkProps } from "react-router-dom";
-import { CaretRight, FileArrowDown } from "phosphor-react";
-import { ReactElement, ReactNode } from "react";
+import { CaretRight } from "phosphor-react";
+import { ReactNode, AnchorHTMLAttributes } from "react";
 
-interface CardProps extends LinkProps {
+interface CardProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   to: string;
   title: string;
   icon: ReactNode;
@@ -14,11 +13,13 @@ export const Card = ({
   icon,
   title,
   description,
+  ...rest
 }: CardProps) => {
   return (
-    <Link
-      to={to}
+    <a
+      href={to}
       className="flex items-stretch justify-between flex-auto xl:flex-1 bg-gray-700 rounded overflow-hidden gap-6 hover:bg-gray-600 transition-colors"
+      {...rest}
     >
       <div className="bg-green-700 p-6 flex items-center text-gray-100">
         {icon}
@@ -34,6 +35,6 @@ export const Card = ({
       <div className="p-6 flex items-center">
         <CaretRight size={24} />
       </div>
-    </Link>
+    </a>
   )
 }
