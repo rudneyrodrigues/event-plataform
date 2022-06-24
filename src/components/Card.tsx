@@ -28,7 +28,7 @@ export const Card = ({
         <strong className="text-2xl">
           {title}
         </strong>
-        <p className="text-sm text-gray-200 mt-2">
+        <p className="hidden md:block md:text-sm text-gray-200 mt-2">
           {description}
         </p>
       </div>

@@ -35,6 +35,9 @@ module.exports = {
         sans: ['Roboto', 'sans-serif'],
         body: ['Roboto', 'sans-serif'],
       },
+      backgroundImage: {
+        blur: 'url(/src/assets/blur-background.png)',
+      },
     },
   },
   plugins: [],

@@ -73,12 +73,12 @@ export const Player = ({ lessonSlug }: PlayerProps) => {
           </div>
 
           <div className="p-8 max-w-[1100px] mx-auto">
-            <div className="flex items-start gap-16">
+            <div className="flex items-start gap-16 flex-col lg:flex-row">
               <div className="flex-1">
-                <h1 className="text-2xl text-gray-100 font-bold">
+                <h1 className="text-2xl text-center md:text-left text-gray-100 font-bold">
                   {data.lesson.title}
                 </h1>
-                <p className="mt-4 text-gray-200 leading-relaxed">
+                <p className="mt-4 text-gray-200 leading-relaxed text-justify">
                   {data.lesson.description}
                 </p>
 
@@ -100,7 +100,7 @@ export const Player = ({ lessonSlug }: PlayerProps) => {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-4">
+              <div className="w-full lg:w-auto flex flex-col md:flex-row lg:flex-col gap-4">
                 <Button to="">
                   <DiscordLogo size={24} />
                   Comunidade do Discord

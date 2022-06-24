@@ -10,7 +10,7 @@ export const Event = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <main className="flex flex-1 w-full max-w-screen-2xl mx-auto">
+      <main className="xl:flex flex-1 w-full max-w-screen-2xl mx-auto">
         {slug ? <Player lessonSlug={slug} /> : <div className="flex-1" />}
 
         <Sidebar />
