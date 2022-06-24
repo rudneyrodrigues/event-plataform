@@ -6,27 +6,27 @@ import { Link, LinkProps, useParams } from 'react-router-dom';
 
 interface LessonProps extends LinkProps {
   title: string;
-  slug: string;
+  to: string;
   availableAt: Date;
   type: "live" | "class";
 }
 
 export const Lesson = ({
   title,
-  slug,
+  to,
   availableAt,
   type,
 }: LessonProps) => {
-  const params = useParams<{ slug: string }>();
+  const {slug} = useParams<{ slug: string }>();
 
   const isLessonAvailable = isPast(availableAt);
   const availableDateFormatted = format(availableAt, "EEEE' • 'dd' de 'MMMM' • 'k'h'mm", { locale: ptBR });
 
-  const isActiveLesson = params.slug === slug;
+  const isActiveLesson = slug === to;
 
   return (
     <Link
-      to={`/event/lesson/${slug}`}
+      to={`/event/lesson/${to}`}
       className="group"
     >
       <span className='text-gray-300'>

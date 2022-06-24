@@ -50,7 +50,7 @@ export const Sidebar = () => {
                     <Lesson
                       key={lesson.id}
                       title={lesson.title}
-                      slug={lesson.slug}
+                      to={lesson.slug}
                       availableAt={new Date(lesson.availableAt)}
                       type={lesson.lessonType}
                     />
